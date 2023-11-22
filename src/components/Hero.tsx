@@ -13,7 +13,7 @@ export const getServerSideProps: GetServerSideProps<Content> = async (context) =
 	return { props: { content: data.content } };
 };
 
-const Hero: React.FC<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ content }) => {
+export const Hero: React.FC<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ content }) => {
 	return (
 		<Box height={['60vh', '90vh']} id="hero">
 			<h1>Hero</h1>
@@ -24,5 +24,3 @@ const Hero: React.FC<InferGetServerSidePropsType<typeof getServerSideProps>> = (
 		</Box>
 	);
 };
-
-export default Hero;
